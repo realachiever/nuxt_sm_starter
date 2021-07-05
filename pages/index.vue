@@ -1,7 +1,13 @@
 <template>
-  <Tutorial />
+  <section>
+    <Tutorial />
+    <slice-zone type="search" uid="home" />
+  </section>
 </template>
 
 <script>
-export default {}
+import SliceZone from 'vue-slicezone'
+export default {
+  components: { SliceZone }
+}
 </script>

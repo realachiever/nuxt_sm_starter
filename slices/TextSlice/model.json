@@ -1,0 +1,79 @@
+{
+  "id": "text_slice",
+  "type": "SharedSlice",
+  "name": "TextSlice",
+  "description": "TextSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextSlice",
+      "primary": {
+        "textType": {
+          "config": {
+            "label": "Text Type",
+            "placeholder": "",
+            "default_value": "default",
+            "options": [
+              "default",
+              "summary",
+              "highlighted",
+              "html"
+            ]
+          },
+          "type": "Select"
+        },
+        "backgroundColor": {
+          "config": {
+            "label": "Background Color",
+            "placeholder": "",
+            "default_value": "default",
+            "options": [
+              "default",
+              "green",
+              "blue",
+              "yellow"
+            ]
+          },
+          "type": "Select"
+        },
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item"
+          },
+          "type": "StructuredText"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "desktop",
+                "width": 800,
+                "height": 600
+              },
+              {
+                "name": "mobile",
+                "width": 400,
+                "height": 300
+              },
+              {
+                "name": "thumb",
+                "width": 100,
+                "height": 75
+              }
+            ]
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

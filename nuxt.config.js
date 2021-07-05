@@ -41,7 +41,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['@nuxtjs/prismic', {
+      endpoint: 'https://wordtips.cdn.prismic.io/api/v2'
+    }],
+    ['nuxt-sm']
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -49,5 +53,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    transpile: ['vue-slicezone', 'nuxt-sm']
+  },
+  storybook: {
+    stories: ['~/slices/**/*.stories.js']
+  },
+  ignore: ['**/*.stories.js']
 }
